@@ -1,0 +1,114 @@
+<div class="thankyou-page__container">
+
+  <h1 class="thankyou-page__container__header">Chewy</h1>
+  <p class="thankyou-page__container__title">Your order is on its way</p>
+
+
+
+  <div class="thankyou-page__container__truck-image-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2pl7ywxJuElCghl5vAFmdXcgpVqPQXJe1Cw&s"
+      alt="Truck delivering order">
+  </div>
+
+  <button class="thankyou-page__container__track-button">Track your order</button>
+
+
+  <p class="thankyou-page__container__tracking-info">Please allow 24 hours to track your order</p>
+
+  <div class="thankyou-page__container__content">
+
+
+    <div class="thankyou-page__container__content__summary-section">
+      <h3 class="thankyou-page__container__content__summary-section__title">Summary</h3>
+      <div class="thankyou-page__container__content__summary-section__content">
+        <div
+          class="thankyou-page__container__content__summary-section__content__summary-item thankyou-page__container__content__summary-section__content__summary-item-item">
+          <span>Subtotal:</span> <span
+            class="thankyou-page__container__content__summary-section__content__summary-item__value">${{
+            orderSummary.subtotalAmt }}</span>
+        </div>
+
+
+        <div class="thankyou-page__container__content__summary-section__content__summary-item">
+          <span>Tax:</span> <span
+            class="thankyou-page__container__content__summary-section__content__summary-item__value">${{
+            orderSummary.tax }}</span>
+        </div>
+        <div class="thankyou-page__container__content__summary-section__content__summary-item">
+          <span>Discount:</span> <span
+            class="thankyou-page__container__content__summary-section__content__summary-item__value">${{
+            orderSummary.discount }}</span>
+        </div>
+        <div class="thankyou-page__container__content__summary-section__content__summary-item">
+          <span>Delivery:</span> <span
+            class="thankyou-page__container__content__summary-section__content__summary-item__value">${{
+            orderSummary.deliveryCharge }}</span>
+        </div>
+        <div class="thankyou-page__container__content__summary-section__content__summary-item">
+          <span>Grand Total:</span> <span
+            class="thankyou-page__container__content__summary-section__content__summary-item__value">${{
+            orderSummary.total }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="thankyou-page__container__content__shipping-section">
+
+      <h3 class="thankyou-page__container__content__summary-section__title">Shipping Address</h3>
+
+
+      <p><mat-icon>person</mat-icon> {{ shippingAddress.firstName }} {{ shippingAddress.lastName }}</p>
+
+      <p><mat-icon>home</mat-icon> {{ shippingAddress.addressLine1 }}</p>
+      <p><mat-icon>home</mat-icon> {{ shippingAddress.addressLine2 }}</p>
+      <p><mat-icon>location_on</mat-icon> {{ shippingAddress.city }}, {{ shippingAddress.state }} {{
+        shippingAddress.zipCode }}</p>
+
+      <p><mat-icon>public</mat-icon> {{ shippingAddress.country }}</p>
+
+
+      <p><mat-icon>phone</mat-icon> {{ shippingAddress.phone }}</p>
+    </div>
+  </div>
+  <table class="thankyou-page__container__content__items-shipped-table">
+    <thead>
+      <tr>
+        <th>Items Shipped</th>
+        <th>Product Details</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let item of cartItems" class="thankyou-page__container__content__items-shipped-table__container">
+        <td>
+
+          <div class="thankyou-page__container__content__items-shipped-table__container__content">
+
+            <img [src]="item.imageUrl" alt="{{ item.name }}" width="100" height="100">
+            <p class="thankyou-page__container__content__items-shipped-table__container__content_item-name">{{ item.name
+              }}</p>
+          </div>
+
+        </td>
+        <td>
+          <div class="thankyou-page__container__content__items-shipped-table__container__item-desc">{{ item.desc }}
+          </div>
+        </td>
+
+
+        <td>
+          <div class="thankyou-page__container__content__items-shipped-table__container__item-quantity">{{ item.quantity
+            }}</div>
+        </td>
+        <td>
+          <div class="thankyou-page__container__content__items-shipped-table__container__item-price">${{
+            item.price.toFixed(2) }}</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>

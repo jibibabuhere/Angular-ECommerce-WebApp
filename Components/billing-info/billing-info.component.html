@@ -1,0 +1,76 @@
+<div class="billing-info-container">
+    <div class="billing-info__container__header">
+        <h4 class="billing-info__container__header__title">{{billingTitle}}</h4>
+        <div class="billing-info__container__header__edit__button">
+
+            <a [routerLink]="['/address']"
+                class="billing-info__container__header__edit__button__link billing-info__container__header__edit__button____routerLink">
+
+                <mat-icon class="billing-info__container__header__edit__button__edit-icon">edit</mat-icon> <span
+                    class="billing_form__edit__text">Edit</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="billing-info__container__content">
+
+
+        <mat-icon
+            class="billing-info__container__content__icon__style billing-info__container__content__person-icon billing-info__container__content__Icon">person</mat-icon>
+        <label class="billing-info__container__content__text" id="billingName">{{ billingAddress.firstName }} {{
+            billingAddress.lastName }}</label>
+    </div>
+    <div class="billing-info__container__content">
+
+
+        <mat-icon
+            class="billing-info__container__content__icon__style billing-info__container__content__address-icon billing-info__container__content__Icon">home</mat-icon>
+        <label class="billing-info__container__content__text billing-info__container__content__label"
+            id="billingAddress1">{{ billingAddress.addressLine1 }}</label>
+    </div>
+    <div class="billing-info__container__content">
+
+
+        <mat-icon
+            class="billing-info__container__content__icon__style billing-info__container__content__address-icon billing-info__container__content__Icon">home</mat-icon>
+        <label class="billing-info__container__content__text billing-info__container__content__label"
+            id="billingAddress2">{{ billingAddress.addressLine2 }}</label>
+    </div>
+    <div class="billing-info__container__content">
+
+
+        <mat-icon
+            class="billing-info__container__content__icon__style billing-info__iconSize billing-info__icon_aign billing-info__container__content__Icon">public</mat-icon>
+        <label class="billing-info__container__content__text" id="billingCountry">{{ billingAddress.country }}</label>
+    </div>
+    <div class="billing-info__container__content">
+
+
+        <mat-icon
+            class="billing-info__container__content__icon__style billing-info__iconSize billing-info__icon_aign billing-info__container__content__Icon">pin</mat-icon>
+        <label class="billing-info__container__content__text billing-info__container__content__label" id="billingZip">{{
+            billingAddress.zipCode }}</label>
+    </div>
+    <div class="billing-info__container__content">
+
+
+        <mat-icon
+            class="billing-info__container__content__icon__style billing-info__iconSize billing-info__icon_aign billing-info__container__content__Icon">location_on</mat-icon>
+        <label class="billing-info__container__content__text" id="billingCity">{{ billingAddress.city }}</label>
+    </div>
+    <div class="billing-info__container__content">
+
+
+        <mat-icon
+            class="billing-info__container__content__icon__style billing-info__iconSize billing-info__icon_aign billing-info__container__content__Icon">map</mat-icon>
+        <label class="billing-info__container__content__text billing-info__container__content__label"
+            id="billingState">{{ billingAddress.state }}</label>
+    </div>
+    <div class="billing-info__container__content">
+
+
+        <mat-icon
+            class="billing-info__container__content__icon__style billing-info__iconSize billing-info__icon_aign billing-info__container__content__Icon">phone</mat-icon>
+        <label class="billing-info__container__content__text" id="billingPhone">{{ billingAddress.phone }}</label>
+    </div>
+</div>

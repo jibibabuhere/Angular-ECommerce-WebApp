@@ -1,0 +1,58 @@
+<div *ngIf="cartItems.length > 0; else emptyCart">
+  <div *ngFor="let item of cartItems; let i = index" class="cart-container">
+    <div class="cart-container__content">
+
+      <div class="cart-container__summary">
+        <img [src]="item.imageUrl" [alt]="item.name" class="cart-container__summary__cart-image">
+
+        <p class="cart-container__summary__Itemprice">${{ item.price.toFixed(2) }}</p>
+
+      </div>
+
+      <div class="cart-container__sub__summary">
+        <div class="cart-container__sub__summary__card-header">
+          <h3 class="cart-container__sub__summary__card-header__card-title">{{ item.name }}</h3>
+          <img
+            src="https://st2.depositphotos.com/5266903/7830/v/450/depositphotos_78309448-stock-illustration-trash-can-flat-smooth-blue.jpg"
+            alt="Remove product img" style="cursor: pointer;"
+            class="cart-container__sub__summary__card-header__trash-image" (click)="handleOpenDeleteDialog(i)">
+
+        </div>
+        <p class="cart-container__sub__summary__cart-desc">{{ item.desc }}</p>
+        <p class="cart-container__sub__summary__cart-price">${{ item.price.toFixed(2) }}</p>
+        <div class="cart-container__sub__summary__quantity-container">
+          <div class="cart-container__sub__summary__quantity-container__summary">
+            <p class="cart-container__sub__summary__quantity-container__summary__text">Qty</p>
+          </div>
+          <div
+            class="cart-container__sub__summary__quantity-container__summary__quantyty-wrapper cart-container__sub__summary__quantity-container__summary__quantyty-container">
+            <span class="cart-container__sub__summary__quantity-container__summary__quantyty-wrapper__minus-button"
+              (click)="decrementItemQuantity(item)" [style.opacity]="item.quantity === 1 ? 0.5 : 1"
+              [style.cursor]="item.quantity === 1 ? 'not-allowed' : 'pointer'"
+              [class.blurred]="item.quantity === 1">-</span>
+            <input type="number" [(ngModel)]="item.quantity" min="1" max="50"
+              class="cart-container__sub__summary__quantity-container__summary__quantyty-wrapper__cart-quantity"
+              (input)="handleInputChange(item, $event)" (blur)="handleBlurInput(item, $event)" />
+            <span class="cart-container__sub__summary__quantity-container__summary__quantyty-wrapper__plus-button"
+              (click)="incrementItemQuantity(item)">+</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<ng-template #emptyCart>
+  <div class="cart-empty-cart-container">
+    <div class="cart-empty-cart-container__cart-message">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-yrKy00koNPRSg-MAE5rkMmy2HiIAE4U_HQ&s"
+        alt="Empty Cart">
+      <p>No items in the cart</p>
+      <button class="cart-add-items-button" (click)="emitNavigateToCart()">Add Items to the cart</button>
+    </div>
+  </div>
+</ng-template>

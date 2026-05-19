@@ -1,0 +1,375 @@
+.payment-container {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative !important;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.payment-container h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-container button i {
+    margin-right: 5px;
+}
+
+.payment-container__content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.payment-container__content__payment__summary {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+
+
+.payment-container__content__payment__summary__payment-option {
+    border: 2px solid #ccc;
+
+
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    height: 65px;
+    transition: border-color 0.3s;
+}
+
+.payment-container__content__payment__summary__payment-option.selected {
+    border-color: orange;
+}
+
+.payment-container__content__payment__summary__payment-option img {
+    width: 60px;
+    height: 50px;
+}
+
+.payment-container__content__payment__summary__payment-option__image {
+
+    margin-top: 8px;
+
+}
+
+.payment-container__content__payment__summary__card-details__input-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.payment-container__content__payment__summary__card-details__input-group__input-item {
+    flex: 1;
+}
+
+.payment-container__content__payment__summary__card-details__input-group__input-item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-container__content__payment__summary__card-details__input-group__input-item input {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+}
+
+.errpr {
+    color: red;
+}
+
+.payment-error-message {
+    color: red;
+    font-size: 14px;
+    display: inline;
+    margin-top: 10px;
+}
+
+.payment-container__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+
+}
+
+.payment-container__content__payment__summary__card-details {
+    margin-top: 80px;
+    margin-left: -300px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.payment-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.payment-container__content__payment__summary__card-details__input-group__input-item input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+
+}
+
+.payment-container__content__payment__summary__card-details__input-group__input-item label {
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+
+    .payment-container {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        padding: 10px;
+        padding-right: 20x;
+        padding: 15px;
+        margin: 5px 0;
+    }
+
+    .payment-container h2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+
+    .payment-container__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .payment-container__content__payment__summary__payment-option {
+        width: 330px;
+        height: 60px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+
+    .payment-container__content__payment__summary__payment-option__image {
+        margin-top: 5px;
+    }
+
+    .payment-container__content__payment__summary__card-details {
+
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        padding-bottom: 20px;
+    }
+
+
+    .payment-container__content__payment__summary__card-details__input-group {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .payment-container__content__payment__summary__card-details__input-group__input-item input {
+
+        width: 320px;
+        padding: 8px;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+
+    .payment-container__title {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .payment-container__content__payment__summary {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment-error-message {
+        font-size: 12px;
+    }
+
+    #visaDIV {
+        order: 1;
+    }
+
+    #cardDetailsDIV {
+        order: 2;
+        width: 100%;
+        height: 50%;
+        margin-top: 0px;
+        margin-bottom: 30px;
+
+    }
+
+    #gpayDIV {
+        order: 3;
+    }
+
+    #applepayDIV {
+        order: 4;
+    }
+
+    .payment-container__content__payment__summary__card-details__input-group__input-item input {
+        width: 325px;
+        padding: 8px;
+        height: 35px;
+        margin-bottom: 5px;
+
+    }
+
+    .payment-container__content__payment__summary__payment-option {
+        width: 340px;
+        height: 60px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        border: 1px solid #ccc;
+    }
+
+}
+
+//   surface duo
+
+@media (min-width: 540px) and (max-width: 720px) {
+    .payment-container__content {
+        align-items: center;
+
+    }
+
+    .payment-container__title {
+        margin-left: 0px;
+    }
+
+    .payment-container__content__payment__summary__card-details {
+        padding-bottom: 20px;
+    }
+
+
+}
+
+
+// ipad mini
+
+@media (min-width: 726px) and (max-width: 768px) {
+    .payment-container {
+        width: 380px;
+    }
+
+
+    .payment-container__content__payment__summary__card-details__input-group__input-item input {
+        width: 80%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        height: 35px;
+    }
+
+    .payment-container__content__payment__summary__card-details {
+        margin-right: -10px;
+    }
+
+
+}
+
+// ipad pro
+
+@media (min-width: 900px) and (max-width: 1210px) {
+    .payment-container {
+        width: 400px;
+    }
+
+    .payment-container__content__payment__summary__card-details__input-group__input-item input {
+        width: 80%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        height: 35px;
+    }
+
+    .payment-container__content__payment__summary__card-details {
+        margin-right: -10px;
+    }
+
+
+}
+
+
+//ipad air 
+@media (min-width: 801px) and (max-width: 990px) {
+    .payment-container {
+        width: 400px;
+    }
+
+
+    .payment-container__content__payment__summary__card-details__input-group__input-item input {
+        width: 80%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        height: 35px;
+
+    }
+
+    .payment-container__content__payment__summary__card-details {
+        margin-right: -10px;
+    }
+
+}
+
+//   surface duo
+@media (min-width: 540px) and (max-width: 720px) {
+    .payment-container {
+        width: 440px;
+    }
+
+    .payment-container__title {
+        margin-left: 35px;
+    }
+
+    .payment-container__content__payment__summary__card-details {
+        padding-bottom: 20px;
+        align-items: center;
+    }
+
+    .payment-container__content__payment__summary__payment-option {
+        width: 400px
+    }
+
+    .payment-container__content__payment__summary__card-details__input-group__input-item input {
+        width: 390px;
+        padding: 8px;
+        height: 35px;
+        margin-bottom: 5px;
+
+    }
+
+    .payment-container__content__payment__summary__card-details__input-group__input-item label {
+
+        margin-bottom: 8px;
+        margin-left: 5px;
+    }
+
+}

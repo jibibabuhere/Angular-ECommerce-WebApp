@@ -1,0 +1,94 @@
+<form class="payment-container" [formGroup]="paymentForm" novalidate>
+    <h4 class="payment-container__title">{{paymentTitle}}</h4>
+    <div class="payment-container__content">
+        <div class="payment-container__content__payment__summary__options">
+            <div class="payment-container__content__payment__summary">
+                <div class="payment-container__content__payment__summary__payment-option visaClass" id="visaDIV"
+                    (click)="onSelectPaymentOption('visa')" [ngClass]="{'selected': selectedPaymentOption === 'visa'}">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5J0VNvLRaCCDree4rS6S6tJXeRvbDMxOOqw&s"
+                        alt="Visa" class="payment-container__content__payment__summary__payment-option__image">
+                </div>
+                <div class="payment-container__content__payment__summary__payment-option gpayClass" id="gpayDIV"
+                    (click)="onSelectPaymentOption('gpay')" [ngClass]="{'selected': selectedPaymentOption === 'gpay'}">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6124/6124998.png" alt="GPay"
+                        class="payment-container__content__payment__summary__payment-option__image">
+                </div>
+
+                <div class="payment-container__content__payment__summary__payment-option applepayClass" id="applepayDIV"
+                    (click)="onSelectPaymentOption('applepay')"
+                    [ngClass]="{'selected': selectedPaymentOption === 'applepay'}">
+                    <img src="https://www.svgrepo.com/show/303191/apple-pay-logo.svg" alt="Apple Pay"
+                        class="payment-container__content__payment__summary__payment-option__image">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="payment-container__content__payment__summary__card-details" id="cardDetailsDIV"
+            *ngIf="selectedPaymentOption === 'visa'">
+
+
+            <div class="payment-container__content__payment__summary__card-details__input-group">
+                <div class="payment-container__content__payment__summary__card-details__input-group__input-item">
+                    <label for="cardName">Name on Card
+
+
+                        <span
+                            [class.payment-error-message]="paymentFormControls['cardName'].touched && paymentFormControls['cardName'].invalid">*</span>
+
+                    </label>
+                    <input type="text" formControlName="cardName" maxlength="50">
+                    <span class="payment-error-message"
+                        *ngIf="paymentFormControls['cardName'].touched && paymentFormControls['cardName'].invalid">
+                        Name on card is required
+                    </span>
+                </div>
+                <div class="payment-container__content__payment__summary__card-details__input-group__input-item">
+                    <label for="cardNumber">Card Number
+                        <span
+                            [class.payment-error-message]="paymentFormControls['cardNumber'].touched && paymentFormControls['cardNumber'].invalid">*</span>
+                    </label>
+                    <input type="text" formControlName="cardNumber" maxlength="16" inputmode="numeric" pattern="\d*"
+                        oninput="this.value = this.value.replace(/\D/,'')" title="Card number should be digits only">
+                    <span class="payment-error-message"
+                        *ngIf="paymentFormControls['cardNumber'].touched && paymentFormControls['cardNumber'].invalid">
+                        Card Number should be 16 digits
+                    </span>
+                </div>
+            </div>
+
+
+
+
+            <div class="payment-container__content__payment__summary__card-details__input-group">
+                <div class="payment-container__content__payment__summary__card-details__input-group__input-item">
+                    <label for="expiryDate">Expiry Date
+                        <span
+                            [class.payment-error-message]="paymentFormControls['expiryDate'].touched && paymentFormControls['expiryDate'].invalid">*</span>
+                    </label>
+                    <input type="text" formControlName="expiryDate" maxlength="5" placeholder="MM/YY"
+                        inputmode="numeric" pattern="\d{2}/\d{2}" title="Expiry date should be in MM/YY format">
+                    <span class="payment-error-message"
+                        *ngIf="paymentFormControls['expiryDate'].touched && paymentFormControls['expiryDate'].invalid">
+                        Expiry Date should be MM/YY
+                    </span>
+                </div>
+                <div class="payment-container__content__payment__summary__card-details__input-group__input-item">
+                    <label for="cvc">CVC
+                        <span
+                            [class.payment-error-message]="paymentFormControls['cvc'].touched && paymentFormControls['cvc'].invalid">*</span>
+                    </label>
+                    <input type="text" formControlName="cvc" maxlength="3"
+                        oninput="this.value = this.value.replace(/\D/,'')" inputmode="numeric" pattern="\d*"
+                        title="CVC should be digits only">
+                    <span class="payment-error-message"
+                        *ngIf="paymentFormControls['cvc'].touched && paymentFormControls['cvc'].invalid">
+                        CVC should be 3 digits
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</form>

@@ -1,0 +1,46 @@
+<div class="login-container">
+  <div class="left-section">
+    <h1>Login Here</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="emailOrUsername">Email / Username</label>
+        <input type="text" id="emailOrUsername" formControlName="emailOrUsername"
+          placeholder="Enter your email or username" />
+        <div *ngIf="loginForm.get('emailOrUsername')?.touched && loginForm.get('emailOrUsername')?.invalid"
+          class="error-message">
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input [type]="isPasswordVisible ? 'text' : 'password'" id="password" formControlName="password"
+            placeholder="Enter your password" />
+          <span class="eye-icon" (click)="togglePasswordVisibility()">
+            {{ isPasswordVisible ? '👁️' : '👁️‍🗨️' }}
+          </span>
+        </div>
+        <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error-message">
+
+        </div>
+      </div>
+
+      <button type="submit" class="login-button">Login</button>
+      <div *ngIf="errorMessage" class="error-message">
+        <small style="color: red;">{{ errorMessage }}</small>
+      </div>
+
+    </form>
+    <p class="signup-text">
+      I don't have an account,
+      <a (click)="navigateToSignup()">Please click here to sign up</a>.
+    </p>
+  </div>
+
+  <div class="right-section">
+    <img src="https://img.freepik.com/premium-vector/vector-illustration-online-delivery-service-concept-showing-delivery-man-sending-packa
+  ge-customer-eps-10_505557-750.jpg?w=360" alt="Man holding a cart" />
+  </div>
+</div>

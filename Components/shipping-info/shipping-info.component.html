@@ -1,0 +1,62 @@
+<div class="shipping-info__container">
+    <div class="shipping-info__container__header">
+        <h4 class="shipping-info__container__header__title">{{shippingTitle}}</h4>
+        <div class="shipping-info__container__header__edit-button">
+
+            <a [routerLink]="['/address']"
+                class="shipping-info__container__header__edit-button__link shipping-info__container__header__edit-button__routerLink">
+
+                <mat-icon class="shipping-info__container__header__edit-button__edit-icon">edit</mat-icon> <span
+                    class="shipping-info__container__title__edit__text">Edit</span>
+            </a>
+        </div>
+    </div>
+    <div class="shipping-info__container__content">
+        <mat-icon
+            class="shipping-info__container__content__icon-style shipping-info__container__content-Icon">person</mat-icon>
+        <label class="shipping-info__container__content__label_text" id="shippingName">{{ shippingAddress.firstName }}
+            {{ shippingAddress.lastName }}</label>
+    </div>
+    <div class="shipping-info__container__content">
+        <mat-icon
+            class="shipping-info__container__content__icon-style shipping-info__container__content__address-line shipping-info__container__content-Icon">home</mat-icon>
+        <label class="shipping-info__container__content__label_text shipping-info__container__label"
+            id="shippingAddress1">{{ shippingAddress.addressLine1 }}</label>
+    </div>
+    <div class="shipping-info__container__content">
+        <mat-icon
+            class="shipping-info__container__content__icon-style shipping-info__container__content__address-line shipping-info__container__content-Icon">home</mat-icon>
+        <label class="shipping-info__container__content__label_text shipping-info__container__label"
+            id="shippingAddress2">{{ shippingAddress.addressLine2 }}</label>
+    </div>
+    <div class="shipping-info__container__content">
+        <mat-icon
+            class="shipping-info__container__content__icon-style shipping-info__container__content__icon__size shipping-info__container__content__ub_titles shipping-info__container__content-Icon">public</mat-icon>
+        <label class="shipping-info__container__content__label_text" id="shippingCountry">{{ shippingAddress.country
+            }}</label>
+    </div>
+    <div class="shipping-info__container__content">
+        <mat-icon
+            class="shipping-info__container__content__icon-style shipping-info__container__content__icon__size shipping-info__container__content__ub_titles shipping-info__container__content-Icon">pin</mat-icon>
+        <label class="shipping-info__container__content__label_text shipping-info__container__label" id="shippingZip">{{
+            shippingAddress.zipCode }}</label>
+    </div>
+    <div class="shipping-info__container__content">
+        <mat-icon
+            class="shipping-info__container__content__icon-style shipping-info__container__content__icon__size shipping-info__container__content__ub_titles shipping-info__container__content-Icon">location_on</mat-icon>
+        <label class="shipping-info__container__content__label_text" id="shippingCity">{{ shippingAddress.city
+            }}</label>
+    </div>
+    <div class="shipping-info__container__content">
+        <mat-icon
+            class="shipping-info__container__content__icon-style shipping-info__container__content__icon__size shipping-info__container__content__ub_titles shipping-info__container__content-Icon">map</mat-icon>
+        <label class="shipping-info__container__content__label_text shipping-info__container__label"
+            id="shippingState">{{ shippingAddress.state }}</label>
+    </div>
+    <div class="shipping-info__container__content">
+        <mat-icon
+            class="shipping-info__container__content__icon-style shipping-info__container__content__icon__size shipping-info__container__content__ub_titles shipping-info__container__content-Icon">phone</mat-icon>
+        <label class="shipping-info__container__content__label_text" id="shippingPhone">{{ shippingAddress.phone
+            }}</label>
+    </div>
+</div>

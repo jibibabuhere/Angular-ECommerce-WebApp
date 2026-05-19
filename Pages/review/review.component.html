@@ -1,0 +1,41 @@
+<div class="review__container">
+    <div class="review__container__header">
+        <a href=""></a>
+        <button mat-icon-button (click)="goToAddress()" class="review__container__header__back__button">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        <h2 class="review__container__header__Text">{{reviewTitle}}</h2>
+    </div>
+    <div class="review__container__content">
+        <div class="review__container__content__summary">
+            <div class="review__container__content__summary__content">
+                <div class="review__container__content__summary__content__sub-content">
+
+                    <app-contact-info [contactTitle]="contactTitle" [email]="email">
+                    </app-contact-info>
+
+                </div>
+                <div class="review__container__content__summary__content__sub-content">
+                    <app-billing-info [billingAddress]="billingAddress"></app-billing-info>
+                </div>
+                <div class="review__container__content__summary__content__sub-field">
+                    <app-shipping-info [shippingTitle]="shippingTitle"
+                        [shippingAddress]="shippingAddress"></app-shipping-info>
+                </div>
+                <div class="review__container__content__summary__content__sub-field">
+
+                    <app-payment [paymentForm]="paymentForm" [selectedPaymentOption]="selectedPaymentOption"
+                        (selectPaymentOption)="selectPaymentOption($event)"></app-payment>
+                </div>
+
+            </div>
+            <div class="review__container__content__summary__order-summary">
+                <app-common-order-summary [cartItems]="cartItems" [orderSummary]="orderSummary"
+                    [isOrderSummaryVisible]="isOrderSummaryVisible" [buttonText]="'Checkout'"
+                    [isButtonEnabled]="isCheckoutEnabled" (buttonClick)="completeCheckout()">
+                </app-common-order-summary>
+
+            </div>
+
+        </div>
+    </div>

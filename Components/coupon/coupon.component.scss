@@ -1,0 +1,212 @@
+.coupon-container {
+  font-family: Arial, sans-serif;
+  // max-width: 400px;
+  margin: 0 auto;
+  height: auto;
+  width: 500px;
+
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.coupon-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.apply-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: rgb(222, 18, 110);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  background-color: #ff7fbf;
+}
+
+.applied-text {
+  margin-top: 15px;
+  color: green;
+  font-size: 14px;
+}
+
+hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.close-icon {
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+  margin-left: 0px;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-icon:hover {
+  color: darkred;
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 767px) {
+  .coupon-container {
+    width: 350px;
+
+  }
+}
+
+
+// ipad air, z fold
+@media (min-width: 769px) and (max-width: 915px) {
+  .coupon-container {
+    width: 300px;
+
+  }
+}
+
+// ipad  pro 
+
+@media (min-width: 900px) and (max-width: 1210px) {
+  .coupon-container {
+    width: 400px;
+
+  }
+}
+
+//ipad  mini 
+@media (min-width: 726px) and (max-width: 768px) {
+  .coupon-container {
+    width: 500px;
+
+  }
+}
+
+
+///////////samsung galaxy s8+
+@media (max-width: 360px) {
+  .coupon-container {
+    width: 350px;
+
+  }
+
+}
+
+
+///////////////surface pro 7
+@media (min-width: 769px) and (max-width: 915px) {
+  .coupon-container {
+    width: 300px;
+
+  }
+}
+
+
+///////////surface duo
+@media (min-width: 540px) and (max-width: 720px) {
+  .coupon-container {
+    width: 380px;
+
+  }
+}
+
+///////////galaxy zfold
+@media (max-width: 360px) {
+  .coupon-container {
+    width: 330px;
+
+  }
+}
+
+
+//////////samsung galaxy A51 / Iphone XR
+@media (min-width: 391px) and (max-width: 430px) {
+  .coupon-container {
+    width: 338px;
+
+  }
+}
+
+///////// iPhone 12 Pro Max 
+
+@media (width: 390px) {
+  .coupon-container {
+    width: 380px;
+  }
+}
+
+////////////next hub max
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .coupon-container {
+    width: 500px;
+
+  }
+}
+
+// galaxy S20 utra 
+@media (width: 412px) {
+  .coupon-container {
+    width: 335px;
+
+
+  }
+
+
+
+}
+
+
+// ipad pro
+@media (width: 1024px) {
+  .coupon-container {
+    width: 400px;
+
+
+  }
+
+
+
+}
+
+
+//surface duo
+@media (width: 540px) {
+  .coupon-container {
+    width: 370px;
+
+
+  }
+
+
+
+}

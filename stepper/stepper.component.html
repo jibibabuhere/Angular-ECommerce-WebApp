@@ -1,0 +1,41 @@
+<mat-horizontal-stepper class="mat-step-header" [selectedIndex]="activeStep" (selectionChange)="onStepChange($event)">
+  <mat-step class="mat-step-container">
+
+    <ng-template matStepLabel>
+      <span [ngClass]="{'active-step': activeStep === 0, 'inactive-step': activeStep !== 0}">
+        <mat-icon *ngIf="activeStep === 0">location_on</mat-icon>
+        <span class="mat-icon-text"> Address</span>
+      </span>
+      <div>
+      </div>
+    </ng-template>
+  </mat-step>
+  <mat-step class="mat-step-container">
+    <ng-template matStepLabel>
+      <span [ngClass]="{'active-step': activeStep === 1, 'inactive-step': activeStep !== 1}">
+        <mat-icon *ngIf="activeStep === 1">assignment</mat-icon>
+
+        <span class="mat-icon-text">Review</span>
+      </span>
+      <div>
+      </div>
+    </ng-template>
+  </mat-step>
+  <mat-step class="mat-step-container">
+
+    <ng-template matStepLabel>
+      <span [ngClass]="{'active-step': activeStep === 2, 'inactive-step': activeStep !== 2}">
+        <mat-icon *ngIf="activeStep === 2">done</mat-icon>
+
+        <span class="mat-icon-text">Thank you</span>
+      </span>
+      <div>
+      </div>
+    </ng-template>
+  </mat-step>
+</mat-horizontal-stepper>
+<div class="stepper_title">
+  <p style="font-size: 14px;margin-left: 60px;">Address</p>
+  <p style="font-size: 14px;margin-left: 60px;">Review</p>
+  <p style="font-size: 14px;margin-left: 40px;">Thank you</p>
+</div>

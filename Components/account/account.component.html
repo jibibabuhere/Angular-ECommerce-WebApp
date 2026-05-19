@@ -1,0 +1,29 @@
+<div class="header-section">
+  <div class="account-section" style="position: relative;">
+    <button class="account-button" (click)="toggleTooltip()">
+
+      <img src="https://i.pinimg.com/280x280_RS/02/72/3a/02723a8b181c646ad15095dd4786dac1.jpg" alt="User"
+        class="user-icon" />
+      <p class="user-icon-text">{{ isUserLoggedIn() ? 'Account' : 'Login' }}</p>
+    </button>
+    <div class="tooltip" *ngIf="showTooltip" style="position: absolute; top: 40px; right: 0; z-index: 1000;">
+      <div class="user-info">
+        <img
+          src="https://media.istockphoto.com/id/522855255/vector/male-profile-flat-blue-simple-icon-with-long-shadow.jpg?s=612x612&w=0&k=20&c=EQa9pV1fZEGfGCW_aEK5X_Gyob8YuRcOYCYZeuBzztM="
+          alt="User Image" class="user-avatar" />
+        <p style="margin-top: 10px;">{{ loggedInUser.firstName }} {{ loggedInUser.lastName }}</p>
+      </div>
+
+
+      <button (click)="goToLogin()" class="logout-tooltip-button">
+        <img src="https://i.pinimg.com/280x280_RS/02/72/3a/02723a8b181c646ad15095dd4786dac1.jpg" alt="Logout Icon"
+          style="height: 20px; width: 20px; margin-left: 15px;" />
+
+        <p style="margin-left: 18px;font-size: 14px;">
+          {{ isUserLoggedIn() ? 'Logout' : 'Login' }}
+        </p>
+      </button>
+    </div>
+  </div>
+
+</div>

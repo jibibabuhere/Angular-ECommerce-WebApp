@@ -1,0 +1,19 @@
+<div class="contact-info__container">
+
+    <div class="contact-info__container__header">
+        <h4 class="contact-info__container__header__title">{{contactTitle}}</h4>
+        <div class="contact-info__container__header__edit__button">
+            <a [routerLink]="['/address']"
+                class="contact-info__container__header__edit__button__link contact-info__container__header__edit__button__routerLink">
+                <mat-icon class="contact-info__container__header__edit__button__edit-icon">edit</mat-icon> <span
+                    class="contact-info__container__header__edit__button__edit-text">Edit</span>
+            </a>
+        </div>
+    </div>
+    <div class="contact-info__container__content">
+
+        <mat-icon class="contact-info__container__content__emailIcon">email</mat-icon>
+        <label id="contactEmail" class="contact-info__container__content__label-text">{{email}}</label>
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div *ngIf="cartItems.length > 0" class="coupon-container">
+  <p>Promo code / coupon</p>
+  <div class="input-row">
+    <input type="text" placeholder="Enter your coupon code" class="coupon-input" [value]="appliedCoupon || ''"
+      [disabled]="appliedCoupon !== null" (input)="onInputChange()" #couponInput />
+    <button class="apply-button" (click)="onApplyCoupon(couponInput.value)" [disabled]="appliedCoupon !== null">
+      Apply
+    </button>
+  </div>
+
+  <div *ngIf="appliedCoupon; else noCoupon">
+    <p class="applied-text" [style.color]="couponMessageColor">
+      {{ couponMessage }}
+      <span class="close-icon" style="color: red; cursor: pointer;" (click)="onRemoveCoupon()">
+        &times;
+      </span>
+    </p>
+  </div>
+
+  <ng-template #noCoupon>
+    <p class="applied-text" [style.color]="couponMessageColor">
+      {{ couponMessage }}
+    </p>
+  </ng-template>
+</div>

@@ -1,0 +1,53 @@
+<div class="cart-container">
+  <app-header></app-header>
+  <div class="cart-container__header__sub___title">
+    <p class="cart-container__header__sub___title__basket__icon">Your Basket</p>
+
+    <div *ngIf="cartItems.length > 0;" class="cart-container__header__button__section">
+      <button class="download-card-button" (click)="downloadAllCards()">Download Cart</button>
+      <button class="clear-all-button" (click)="openClearAllDialog()">Clear All</button>
+    </div>
+  </div>
+  <div class="cart-container__content">
+
+    <div class="cart-container__content-summary">
+      <div class="cart-container__content-summary__sub-summary">
+
+        <app-cart-component [cartItems]="cartItems" (openDeleteDialog)="openDeleteConfirmation($event)"
+          (cartUpdated)="onCartUpdated($event)" (removeItem)="removeItem($event)"
+          (incrementQuantity)="incrementQuantity($event)" (decrementQuantity)="decrementQuantity($event)"
+          (onInputChange)="onInputChange($event.item, $event.event)"
+          (onBlurInput)="onBlurInput($event.item, $event.event)" (navigateToCart)="goToCart()">
+        </app-cart-component>
+
+        <div *ngIf="isDeleteDialogVisible" class="modal">
+          <div class="modal-content">
+            <p>{{ deleteDialogMessage }}</p>
+            <div class="modal-buttons">
+              <button (click)="confirmDelete()">Yes</button>
+              <button (click)="closeDeleteDialog()">No</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="cart-container__content-summary__orderSummary">
+
+        <app-coupon [cartItems]="cartItems" [appliedCoupon]="appliedCoupon" [discountedTotal]="discountedTotal"
+          [couponMessage]="couponMessage" [couponMessageColor]="couponMessageColor" (applyCoupon)="applyCoupon($event)"
+          (removeCoupon)="removeCoupon()" (couponInputChange)="onCouponInputChange()" [isCouponValid]="isCouponValid">
+        </app-coupon>
+
+        <app-common-order-summary [cartItems]="cartItems" [orderSummary]="orderSummary"
+          [isOrderSummaryVisible]="isOrderSummaryVisible" [buttonText]="'Continue To Shipping'"
+          [isButtonEnabled]="isProceedEnabled()" (buttonClick)="proceedToAddress()">
+        </app-common-order-summary>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>

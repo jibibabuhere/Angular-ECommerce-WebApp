@@ -1,0 +1,157 @@
+.logout-right-section {
+  text-align: right;
+  padding: 10px;
+}
+
+.logout-right-section img {
+  display: inline-block;
+}
+
+.logout-right-section-button {
+  border: none;
+  background-color: white;
+}
+
+.header-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .logout-right-section {
+    margin-right: 20px;
+  }
+
+  .account-section {
+    .account-button {
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .user-icon {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+
+      }
+    }
+
+    .tooltip {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      z-index: 1000;
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .user-avatar {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+
+      .logout-tooltip-button {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+          margin-right: 5px;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.header-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .logout-right-section {
+    margin-right: 20px;
+  }
+
+  .account-section {
+    .account-button {
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .user-icon {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+      }
+
+      .user-icon-text {
+        color: white;
+      }
+    }
+
+    .account-button {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      margin-right: 20px;
+
+    }
+
+    .tooltip {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      width: 200px;
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .user-avatar {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+
+      .logout-tooltip-button {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+          margin-right: 5px;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

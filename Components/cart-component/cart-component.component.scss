@@ -1,0 +1,859 @@
+.cart-container__sub__summary__card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.cart-container__sub__summary__quantity-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex: 1;
+  margin-right: 50px;
+
+
+}
+
+.cart-container__sub__summary__quantity-container__summary__quantyty-container {
+  display: flex;
+  align-items: center;
+
+}
+
+.cart-container__sub__summary__quantity-container__summary__quantyty-container input {
+  width: 50px;
+  text-align: center;
+
+}
+
+.cart-container {
+  display: flex;
+  width: 500px;
+
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: white;
+  transition: all .6s ease;
+  margin-left: 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 40px;
+
+}
+
+.cart-container:hover {
+  transform: scale(1.02);
+}
+
+.cart-container-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+.cart-container__content {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+
+
+}
+
+
+.cart-container__summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-container__sub__summary {
+  margin-left: 30px;
+
+}
+
+.cart-container__sub__summary__card-header__card-title {
+  margin-top: 10px;
+  font-size: 20px;
+  padding-left: 15px;
+  // padding-right: 15px;
+  padding-right: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  flex-wrap: wrap;
+  min-width: 160px;
+}
+
+.cart-container__sub__summary__cart-desc {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  flex-wrap: wrap;
+}
+
+.cart-container__sub__summary__cart-price {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+
+  text-overflow: ellipsis;
+
+  width: 50px;
+}
+
+
+.cart-container__summary__Itemprice {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  text-overflow: ellipsis;
+  display: none;
+
+  width: 50px;
+}
+
+.cart-container__sub__summary__quantity-container__summary__text {
+  padding-left: 15px;
+  padding-right: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+
+  flex-wrap: wrap;
+  width: 50px;
+}
+
+.cart-container__sub__summary__quantity-container__summary__quantyty-wrapper {
+  height: 40px;
+  min-width: 110px;
+  display: flex;
+
+
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-container__sub__summary__quantity-container__summary__quantyty-wrapper__minus-button {
+
+
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.cart-container__sub__summary__quantity-container__summary__quantyty-wrapper__plus-button {
+
+  font-size: 25px;
+  font-weight: 600;
+
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.cart-container__sub__summary__quantity-container__summary__quantyty-wrapper__cart-quantity {
+  font-size: 18px;
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.cart-container__summary__cart-image {
+  height: 140px;
+  width: 140px;
+}
+
+.cart-container__sub__summary__card-header__trash-image {
+  height: 25px;
+  width: 25px;
+  margin-top: 5px;
+}
+
+.cart-container__sub__summary__quantity-container__summary {
+  margin-bottom: 10px;
+
+
+}
+
+.cart-empty-cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.cart-empty-cart-container img {
+  width: 200px;
+  margin-left: 450px;
+}
+
+.cart-empty-cart-container p {
+  font-size: 18px;
+  color: #333;
+  margin-left: 450px;
+}
+
+.cart-add-items-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 300px;
+  margin-left: 450px;
+}
+
+.cart-add-items-button:hover {
+  background-color: green;
+
+
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background: red;
+  color: white;
+}
+
+.modal-buttons button:last-child {
+  background: grey;
+  color: white;
+}
+
+
+
+
+
+.clear-all-button {
+  background-color: #8e2022;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 5px;
+  font-size: 12px;
+  //  height: 0px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+  height: auto;
+
+}
+
+.clear-all-button:hover {
+  background-color: #e60023;
+  transform: translateY(-2px);
+}
+
+.clear-all-button:active {
+  background-color: #cc0000;
+  transform: translateY(0);
+}
+
+.clear-all-button:disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+}
+
+
+
+
+
+.download-card-button {
+  background-color: #6f8e20;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 5px;
+  font-size: 12px;
+  // height: 30px;
+  height: auto;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+  box-shadow: 0 2px 4px rgba(8, 170, 113, 0.1);
+  max-width: 120px;
+}
+
+.download-card-button:hover {
+  background-color: #1a76a4;
+  transform: translateY(-2px);
+}
+
+.download-card-button:active {
+  background-color: #5a2c8f;
+  transform: translateY(0);
+}
+
+.download-card-button:disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 767px) {
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+
+  }
+
+  .cart-container__sub__summary__card-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  .cart-container__sub__summary__card-header__trash-image {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    align-self: flex-end;
+  }
+
+
+
+  .cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    // width: 360px;
+    width: 380px;
+    height: auto;
+
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+
+
+  .cart-container__summary__cart-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .cart-container-img {
+    width: 100%;
+    height: auto;
+
+  }
+
+  .cart-container__sub__summary__card-header__card-title,
+  .cart-container__sub__summary__cart-desc {
+    font-size: 14px;
+    margin-top: 0px;
+
+  }
+
+  .cart-container__sub__summary__card-header__card-title {
+    width: 150px;
+    word-wrap: break-word;
+    word-break: break-word;
+
+  }
+
+  .cart-container__sub__summary__quantity-container__summary__quantyty-wrapper {
+    min-width: 80px;
+  }
+
+  .cart-container__sub__summary__cart-price {
+    width: 50px;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .cart-container__sub__summary__cart-desc {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .cart-container__sub__summary__quantity-container__summary__text {
+    width: 30px;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+
+  }
+
+  .cart-empty-cart-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .cart-empty-cart-container img {
+    width: 200px;
+
+    margin-left: 0px;
+  }
+
+  .cart-empty-cart-container p {
+    font-size: 18px;
+    color: #333;
+
+    margin-left: 0px;
+  }
+
+  .cart-add-items-button {
+    font-size: 14px;
+    padding: 8px 15px;
+
+    margin-left: 0;
+  }
+
+  .cart-container__summary__Itemprice {
+    display: block;
+    margin-top: 35px;
+    font-size: 14px;
+    padding-right: 0px;
+    margin-left: 0px;
+    width: 50px;
+
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .cart-container__sub__summary__cart-price {
+    display: none;
+  }
+
+  .cart-container__sub__summary__quantity-container {
+    margin-top: 7px;
+
+  }
+
+  .cart-container__sub__summary__quantity-container__summary__text {
+    font-size: 14px;
+  }
+
+  .cart-container__sub__summary__card-header__trash-image {
+
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+  }
+
+}
+
+///////////iphone SE **////////
+@media (max-width: 480px) {
+
+  .cart-container__sub__summary__card-header__card-title,
+  .cart-container__sub__summary__cart-desc,
+  .cart-container__sub__summary__cart-price {
+    font-size: 12px;
+  }
+
+  .cart-empty-cart-container p {
+    font-size: 16px;
+  }
+
+  .cart-add-items-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .cart-container__summary__cart-image {
+    height: 60px;
+    width: 60px;
+  }
+
+  .cart-container__summary__Itemprice {
+    display: block;
+    margin-top: 35px;
+    font-size: 14px;
+    padding-right: 0px;
+    margin-left: 0px;
+    width: 50px;
+
+    word-wrap: break-word;
+    word-break: break-word;
+
+  }
+
+  .cart-container__sub__summary__cart-price {
+    display: none;
+  }
+
+  .cart-container__sub__summary__quantity-container {
+    margin-top: 6px;
+
+  }
+
+  .cart-container__sub__summary__quantity-container__summary__text {
+    font-size: 14px;
+  }
+
+  .cart-container__sub__summary__card-header__trash-image {
+
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+  }
+
+  .cart-container__sub__summary__card-header__card-title {
+    font-size: 16px;
+  }
+
+  .cart-container__sub__summary__card-header {
+    margin-top: -15px;
+
+  }
+
+
+}
+
+
+
+//  iPhone SE, iPhone XR, Samsung galaxy S8 , samsung galxy A51/71
+@media (max-width: 375px) {
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-container {
+    width: 360px;
+  }
+
+  .cart-container__sub__summary__card-header__card-title,
+  .cart-container__sub__summary__cart-desc {
+    font-size: 12px;
+  }
+}
+
+///////// iPhone 12 Pro Max 
+
+@media (width: 390px) {
+  .cart-container {
+    width: 400px;
+  }
+}
+
+//  iPhone  XR, 14 Pro Max, pixel 7, s20 ultra
+@media (min-width: 391px) and (max-width: 430px) {
+  .cart-container {
+    padding: 10px;
+  }
+
+  .cart-container {
+    width: 360px
+  }
+}
+
+
+
+
+
+// ipad air, z fold 
+@media (min-width: 769px) and (max-width: 915px) {
+  .cart-container {
+    width: 380px;
+    margin-left: 0px;
+    padding: 5px;
+  }
+
+
+  .cart-container__sub__summary__quantity-container {
+    margin-top: 33px;
+  }
+
+  .cart-container__sub__summary__quantity-container {
+    width: 200px;
+  }
+
+  .cart-container__summary__Itemprice {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    padding-right: 0px;
+    margin-left: 0px;
+    width: 50px;
+
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .cart-container__sub__summary__cart-price {
+    display: none;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .cart-container__sub__summary__quantity-container__summary {
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+
+  }
+
+  .cart-container__sub__summary__quantity-container {
+    margin-top: 10px;
+
+  }
+
+  .cart-container__sub__summary__card-header__trash-image {
+
+    margin-right: 20px;
+
+  }
+
+  .cart-container__sub__summary {
+    margin-left: 0px;
+
+  }
+
+  .cart-container__summary__cart-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cart-container__summary__Itemprice {
+    display: none;
+  }
+
+  .cart-container__sub__summary__cart-price {
+    display: block;
+  }
+
+  .cart-container__sub__summary__cart-desc {
+    margin-top: 0px;
+  }
+
+  .cart-container__sub__summary__card-header__card-title {
+    margin-top: 0px;
+  }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .cart-container {
+    flex-direction: row;
+  }
+
+  .cart-container {
+    flex-direction: column;
+    width: 600px;
+
+  }
+
+  .cart-container__sub__summary__card-header__card-title {
+    font-size: 18px;
+  }
+
+  .cart-container__sub__summary__cart-desc {
+    margin-right: 80px;
+  }
+
+
+}
+
+
+//  Samsung Galaxy Z Fold, ASUS Fold 
+@media (max-width: 768px) and (orientation: landscape) {
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-container {
+    width: 80%;
+  }
+
+  .cart-container__sub__summary__card-header__card-title {
+    font-size: 16px;
+  }
+}
+
+
+
+
+// surface pro 7
+@media (min-width: 900px) and (max-width: 915px) {
+  .cart-container {
+    width: 600px;
+    padding: 20px;
+  }
+
+  .cart-container__sub__summary__quantity-container {
+    width: 200px;
+  }
+
+
+}
+
+
+
+// ipad pro
+
+@media (min-width: 900px) and (max-width: 1210px) {
+  .cart-container {
+    width: 400px;
+    padding: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  .cart-container__summary__cart-image {
+    height: 100px;
+    width: 80px;
+  }
+
+  .cart-container__sub__summary {
+    margin-left: 5px;
+
+  }
+
+  .cart-container__sub__summary__cart-desc {
+    margin-top: 0px;
+  }
+}
+
+
+
+//ipad  mini 
+
+@media (min-width: 726px) and (max-width: 768px) {
+  .cart-container {
+    width: 600px;
+    padding: 10px;
+    margin-left: 0px;
+  }
+
+  .cart-container__sub__summary__cart-desc {
+    margin-right: 40px;
+    margin-top: 0px;
+  }
+
+
+
+  .cart-container__sub__summary__quantity-container {
+    width: 200px;
+  }
+
+
+}
+
+
+//   Nest Hub Max 
+@media (min-width: 1215px) and (max-width: 1280px) {
+  .cart-container {
+    width: 500px;
+  }
+}
+
+
+
+
+
+//   surface duo
+@media (min-width: 540px) and (max-width: 720px) {
+  .cart-container {
+    width: 400px;
+  }
+
+  .cart-container__sub__summary__quantity-container {
+    margin-top: 40px;
+
+  }
+
+  .cart-container__sub__summary__quantity-container {
+    margin-top: 35px;
+  }
+}
+
+
+// z fold
+@media (max-width: 360px) {
+  .cart-container {
+    width: 350px;
+
+    padding: 10px;
+  }
+
+  .cart-container__sub__summary__quantity-container {
+    margin-top: 12px;
+  }
+
+
+}
+
+
+// galaxy S20 utra 
+@media (width: 412px) {
+  .cart-container {
+    width: 360px;
+
+
+  }
+
+
+
+}

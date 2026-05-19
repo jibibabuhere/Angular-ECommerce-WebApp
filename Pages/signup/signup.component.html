@@ -1,0 +1,130 @@
+<div class="signup-container">
+
+  <div class="card">
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+
+    <h5>Great! Please sign up</h5>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="inner-card">
+        <h5>Personal details</h5>
+
+        <div class="form-row first-form-row">
+
+          <div class="form-group">
+            <label for="firstName">First name
+              <span [class.error-asterisk]="firstName?.touched && firstName?.invalid">*</span>
+            </label>
+            <input type="text" id="firstName" placeholder="Enter your first name" formControlName="firstName" />
+            <div *ngIf="firstName?.touched && firstName?.invalid">
+              <small class="error-text" *ngIf="firstName?.hasError('required')">First name is required</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last name<span
+                [class.error-asterisk]="lastName?.touched && lastName?.invalid">*</span></label>
+            <input type="text" id="lastName" placeholder="Enter your last name" formControlName="lastName" />
+            <div *ngIf="lastName?.touched && lastName?.invalid">
+              <small class="error-text" *ngIf="lastName?.hasError('required')">Last name is required</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="error-asterisk"
+              *ngIf="email?.touched && email?.invalid">*</span></label>
+          <input type="email" id="email" placeholder="Enter your email" formControlName="email" />
+          <small class="error-text" *ngIf="email?.touched && email?.hasError('required')">Email is required</small>
+          <small class="error-text" *ngIf="email?.touched && email?.hasError('pattern')">Please enter a valid
+            email</small>
+          <small class="error-text" *ngIf="email?.touched && email?.hasError('emailExists')">Email already
+            exists</small>
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile number<span
+              [class.error-asterisk]="mobile?.touched && mobile?.invalid">*</span></label>
+          <input type="tel" id="mobile" placeholder="Enter your mobile number" formControlName="mobile" />
+          <div *ngIf="mobile?.touched && mobile?.invalid">
+            <small class="error-text" *ngIf="mobile?.hasError('required')">Mobile number is required</small>
+            <small class="error-text" *ngIf="mobile?.hasError('pattern')">Enter a valid mobile number</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username <span
+              [class.error-asterisk]="username?.touched && username?.invalid">*</span></label>
+          <input type="text" id="username" placeholder="Enter your username" formControlName="username" />
+          <div *ngIf="username?.touched && username?.invalid">
+            <small class="error-text" *ngIf="username?.hasError('required')">Username is required</small>
+            <small class="error-text" *ngIf="username?.hasError('minlength')">Username must be at least 3 characters
+              long</small>
+            <small class="error-text" *ngIf="username?.hasError('usernameExists')">Username already exists</small>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="password">Password <span
+              [class.error-asterisk]="password?.touched && password?.invalid">*</span></label>
+          <div class="password-wrapper">
+            <input [type]="hidePassword ? 'password' : 'text'" id="password" placeholder="Enter your password"
+              formControlName="password" />
+            <span class="toggle-password-icon" (click)="togglePasswordVisibility()">
+              {{ hidePassword ? '👁️' : '👁️‍🗨️' }}
+            </span>
+          </div>
+          <div *ngIf="password?.touched && password?.invalid">
+            <small class="error-text" *ngIf="password?.hasError('required')">Password is required</small>
+            <small class="error-text" *ngIf="password?.hasError('minlength')">Password must be at least 6 characters
+              long</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm password <span
+              [class.error-asterisk]="confirmPassword?.touched && confirmPassword?.invalid">*</span></label>
+          <div class="password-wrapper">
+            <input [type]="hideConfirmPassword ? 'password' : 'text'" id="confirmPassword"
+              placeholder="Confirm your password" formControlName="confirmPassword" />
+            <span class="toggle-password-icon" (click)="toggleConfirmPasswordVisibility()">
+              {{ hideConfirmPassword ? '👁️' : '👁️‍🗨️' }}
+            </span>
+          </div>
+          <div *ngIf="confirmPassword?.touched && (confirmPassword?.invalid || signupForm.hasError('mismatch'))">
+            <small class="error-text" *ngIf="confirmPassword?.hasError('required')">Confirm password is required</small>
+            <small class="error-text" *ngIf="signupForm.hasError('mismatch')">Password not matching</small>
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="consent" formControlName="consent" />
+          <label for="consent">I have read, understand, and consent to the language and Authorization</label>
+          <div *ngIf="signupForm.get('consent')?.touched && signupForm.get('consent')?.invalid">
+            <small class="error-text" *ngIf="signupForm.get('consent')?.hasError('requiredTrue')">You must consent to
+              the terms</small>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="signup-btn" type="submit" [disabled]="signupForm.invalid"
+        [ngStyle]="{ opacity: signupForm.invalid ? 0.5 : 1 }">
+        Signup
+      </button>
+    </form>
+    <div class="login-link-container">
+      <a (click)="navigateToLogin()" class="login-link">
+        Please click here to login if you are already signed up
+      </a>
+    </div>
+
+
+  </div>
+  <div class="right-section">
+    <img src="https://img.freepik.com/premium-vector/delivery-service-illustration_98292-11453.jpg"
+      alt="Man holding a cart" style="height: 300px;width: 300px; margin-left: 80px;" />
+  </div>
+</div>

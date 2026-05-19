@@ -1,0 +1,481 @@
+.order-summary__container {
+    height: auto;
+    width: 500px;
+
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.order-summary__container__alignent {
+    margin-top: 123px;
+    margin-left: 50px;
+
+}
+
+.order-summary__container__header__truck__icon {
+    display: flex;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.order-summary__container__header__truck__icon__image {
+    flex-shrink: 0;
+}
+
+.order-summary__container__header__truck__icon span {
+    margin-left: 10px;
+
+}
+
+.order-summary__container__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    align-items: center;
+}
+
+.order-summary__container__content span {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.order-summary__container__content__text {
+    max-width: 180px;
+}
+
+.order-summary__container__content__label {
+    // max-width: 58px;
+    max-width: 71px;
+    flex-shrink: 0;
+    text-align: right;
+
+}
+
+.order-summary__container__content__sub__fields__text {
+    max-width: 180px;
+}
+
+
+.order-summary__container__content__values {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    word-wrap: break-word;
+
+}
+
+.order-summary__container__content__sub__fields {
+    margin-top: 40px;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    word-wrap: break-word;
+
+}
+
+.order-summary__content_section {
+    margin-top: 20px;
+
+}
+
+.order-summary__sub__container {
+
+    margin-bottom: 20px;
+
+}
+
+.order_summary__contents {
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+
+.content {
+
+    margin-top: 30px;
+
+}
+
+.order-summary__container__content__submitbutton {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 80px;
+
+
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .order-summary__container {
+
+        height: auto;
+        width: 360px;
+        padding: 20px 15px;
+        margin: 0px;
+    }
+
+    .order-summary__container__alignent {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .order-summary__container__header__truck__icon {
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .order-summary__container__content {
+        flex-direction: row;
+
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        gap: 10px;
+    }
+
+    .order-summary__container__content span {
+        font-size: 14px;
+        gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .order-summary__container__content__values {
+        margin-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .order-summary__container__content__sub__fields {
+        margin-top: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .order-summary__content_section {
+        margin-top: 15px;
+    }
+
+    .order_summary__contents {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .order-summary__container__content__submitbutton {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .order-summary__container__content__label {
+        max-width: 52px;
+        flex-shrink: 0;
+
+    }
+
+    .order-summary__container__content__text {
+        max-width: 180px;
+    }
+
+
+    .order-summary__container__content__sub__fields__text {
+        max-width: 180px;
+    }
+
+}
+
+
+
+// iPhone SE (375px width)
+@media (max-width: 375px) {
+    .order-summary__container {
+        width: 360px;
+        padding: 15px;
+
+    }
+
+    .order-summary__container__content__submitbutton {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .order-summary__container__content__label {
+        max-width: 52px;
+        flex-shrink: 0;
+
+    }
+}
+
+
+///////// iPhone 12 Pro Max 
+
+@media (width: 390px) {
+    .order-summary__container {
+        width: 400px;
+    }
+}
+
+// iPhone XR & iPhone 14 Pro Max , pixel 7,s20 ultra, samsung gaaxy A51/71
+
+@media (min-width: 391px) and (max-width: 430px) {
+    .order-summary__container {
+        // width: 360px;
+        width: 350px;
+
+    }
+
+    .order-summary__container__content__submitbutton {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .order-summary__container__content__label {
+        max-width: 52px;
+        flex-shrink: 0;
+
+    }
+
+    .order-summary__container__content__text {
+        max-width: 180px;
+    }
+
+
+    .order-summary__container__content__sub__fields__text {
+        max-width: 180px;
+    }
+
+}
+
+
+// i pad air ,z fold
+@media (min-width: 769px) and (max-width: 1210px) {
+    .order-summary__container {
+        width: 600px;
+    }
+
+}
+
+
+// Pixel 7 & Samsung 
+@media (max-width: 360px) {
+    .order-summary__container {
+        width: 360px;
+
+        padding: 10px;
+    }
+
+    .order-summary__container__content__submitbutton {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+
+//   Nest Hub, Nest Hub Max 
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .order-summary__container {
+        width: 500px;
+    }
+
+    .order-summary__container__content__submitbutton {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .order-summary__container__content__text {
+        max-width: 180px;
+    }
+
+
+    .order-summary__container__content__sub__fields__text {
+        max-width: 180px;
+    }
+
+}
+
+//   surface duo
+@media (min-width: 540px) and (max-width: 720px) {
+    .order-summary__container {
+        width: 400px;
+    }
+
+    .order-summary__container__content__label {
+        max-width: 52px;
+        flex-shrink: 0;
+
+    }
+
+    .order-summary__container__content__text {
+        max-width: 180px;
+    }
+
+
+    .order-summary__container__content__sub__fields__text {
+        max-width: 180px;
+    }
+
+}
+
+// z fold
+@media (max-width: 360px) {
+    .order-summary__container {
+        width: 350px;
+
+        padding: 10px;
+    }
+
+
+}
+
+
+
+
+// ipad  pro 
+
+@media (min-width: 900px) and (max-width: 1210px) {
+    .order-summary__container {
+        width: 400px;
+
+    }
+
+    .order-summary__container__content__submitbutton {
+        margin-bottom: 20px;
+        margin-top: 15px;
+
+    }
+
+    .order-summary__container__content__label {
+        max-width: 58px;
+        flex-shrink: 0;
+
+
+    }
+
+    .order-summary__container__content__text {
+        max-width: 180px;
+    }
+
+
+    .order-summary__container__content__sub__fields__text {
+        max-width: 180px;
+    }
+
+}
+
+//ipad  mini 
+@media (min-width: 726px) and (max-width: 768px) {
+    .order-summary__container {
+        width: 500px;
+
+
+    }
+
+    .order-summary__container__content__label {
+        max-width: 58px;
+        flex-shrink: 0;
+
+    }
+
+    .order-summary__container__content__text {
+        max-width: 180px;
+    }
+
+
+    .order-summary__container__content__sub__fields__text {
+        max-width: 180px;
+    }
+
+
+}
+
+
+// ipad air, z fold
+@media (min-width: 769px) and (max-width: 915px) {
+    .order-summary__container {
+        width: 300px;
+    }
+
+    .order-summary__container__content__submitbutton {
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+
+    .order-summary__container__content__label {
+        max-width: 58px;
+        flex-shrink: 0;
+
+    }
+
+    .order-summary__container__content__text {
+        max-width: 180px;
+    }
+
+
+    .order-summary__container__content__sub__fields__text {
+        max-width: 180px;
+    }
+
+
+
+}
+
+// galaxy S20 utra 
+@media (width: 412px) {
+    .order-summary__container {
+        width: 343px;
+
+
+    }
+
+
+
+}
+
+//surface duo
+@media (width: 540px) {
+    .order-summary__container {
+        width: 380px;
+
+
+    }
+
+
+
+}

@@ -1,0 +1,280 @@
+.review__container {
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.review__container__content {
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.review__container__content__summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px
+}
+
+
+
+.review__container__header {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    overflow-wrap: break-word;
+}
+
+.header i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header h2 {
+    margin-left: 10px;
+
+}
+
+.review__container__header__Text {
+    font-size: 30px;
+    // font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+
+
+}
+
+.review__container__content__summary__content {
+    padding: 20px;
+}
+
+.review__container__content__summary__order-summary {
+    margin-top: 35px;
+    margin-left: 100px;
+
+}
+
+.review__container__content__summary__content__sub-content {
+    margin-top: 20px;
+}
+
+.review__container__content__summary__content__sub-field {
+    margin-top: 30px;
+}
+
+.review__container__header__back__button {
+    padding: 10px;
+    background-color: white;
+    border-color: white;
+    border: 0;
+}
+
+
+.logout-right-section {
+    text-align: right;
+    padding: 10px;
+}
+
+.logout-right-section img {
+    display: inline-block;
+}
+
+.logout-right-section-button {
+    border: none;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .review__container__content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .review__container__content__summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review__container__header {
+        margin-left: -70px;
+    }
+
+    .header i {
+        font-size: 20px;
+    }
+
+    .header h2 {
+        margin-left: 5px;
+        font-size: 18px;
+    }
+
+    .review__container__header__Text {
+        font-size: 24px;
+    }
+
+    .review__container__content__summary__content {
+        padding: 10px;
+    }
+
+    .review__container__content__summary__order-summary {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .review__container__content__summary__content__sub-content,
+    .review__container__content__summary__content__sub-field {
+        margin-top: 15px;
+    }
+
+    .rreview__container__header__back__button {
+        padding: 8px;
+    }
+}
+
+
+
+
+//ipad  mini 
+
+@media (min-width: 726px) and (max-width: 768px) {
+    .review__container__content {
+        margin: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+
+
+    }
+
+    .review__container__content {
+        padding: 0px;
+
+    }
+
+    .review__container__header__back__button {
+        margin-left: 20px;
+    }
+
+    .review__container__content__summary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+}
+
+//   ipad air 
+@media (min-width: 801px) and (max-width: 990px) {
+    .review__container__content__summary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .review-form-container__order__summary {
+        margin-left: 0px;
+    }
+
+    .review__container {
+        margin: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .review__container__content {
+        padding: 0px;
+
+    }
+
+    .review__container__header__back__button {
+        margin-left: 0px;
+    }
+
+    .review__container__header {
+        padding-left: 0px;
+    }
+
+    .review__container__header {
+        margin: 10px;
+    }
+
+    .review__container__content__summary__content {
+        margin: 0px;
+    }
+
+    .review__container__content__summary__order-summary {
+        margin-left: 0px;
+    }
+
+}
+
+// ipad pro
+
+
+@media (min-width: 900px) and (max-width: 1210px) {
+    .review__container__content__summary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .review-form-container__order__summary {
+        margin-left: 20px;
+    }
+
+    .review__container__content__summary__order-summary {
+        margin-left: 0px;
+    }
+}
+
+// ipad air
+@media (min-width:800px) and (max-width: 890x) {
+    .review__container__content__summary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0px
+    }
+
+    .review__container__header {
+        margin: 0px;
+    }
+
+    .review__container__content__summary__content {
+        margin: 0px;
+    }
+
+    .review__container__content__summary__order-summary {
+        margin-left: 0px;
+    }
+
+}
+
+
+// ipad pro
+@media (width:1024px) {
+    .review__container__header {
+        margin-left: -10px;
+    }
+
+}
+
+
+// surface duo
+@media (width:540px) {
+    .review__container__header {
+        margin: -15px
+    }
+
+}
+
+
+// samsung galaxy A51
+@media (width:412px) {
+    .review__container__header {
+        margin: -50px
+    }
+
+}

@@ -1,0 +1,191 @@
+<div class="shipping_container">
+  <form [formGroup]="shippingForm" (ngSubmit)="submitShipping()" class="shipping-container__form"
+    (ngModelChange)="emitShippingData()">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <h2 class="shipping-container__form__header">{{addressTitle}}</h2>
+      <button (click)="onOpenPopup()" class="checkbox-address-button">Pick Shipping Address</button>
+    </div>
+    <div class="shipping-container__form__container">
+      <div class="shipping-container__form__container__content">
+        <input type="checkbox" id="isShippingSameAsBilling" name="isShippingSameAsBilling"
+          [checked]="isShippingSameAsBilling" (change)="onSameAsBillingChange($event)">
+        <label for="sameAsBilling"
+          class="shipping-container__form__container__content__checkbox-label">{{sameAsBillingTitle}}</label>
+      </div>
+    </div>
+
+    <div class="shipping-container__form__container__summary" id="shippingFormContainer"
+      [hidden]="formData.isShippingSameAsBilling">
+      <div class="shipping-form__sub_container">
+        <div class="shipping-container__form__container">
+          <label for="shippingFirstName" class="label">First Name
+            <label [class.error]="shippingForm.get('firstName')?.invalid && (shippingForm.get('firstName')?.touched)">
+              *
+            </label>
+          </label>
+
+          <input type="text" class="shipping_form__txtInputsize txtInputsizes" name="shippingFirstName"
+            formControlName="firstName" id="firstName" />
+          <div *ngIf="shippingForm.get('firstName')?.touched && shippingForm.get('firstName')?.invalid" class="error">
+            First Name is required
+          </div>
+        </div>
+
+        <div class="shipping-container__form__container txtInputsizess">
+          <label for="shippingLastName" class="label">Last Name
+            <label [class.error]="shippingForm.get('lastName')?.invalid && (shippingForm.get('lastName')?.touched)">
+              *
+            </label>
+          </label>
+
+          <input type="text" class="shipping_form__txtInputsize txtInputsizess" name="shippingLastName"
+            formControlName="lastName" id="lastName" />
+          <div *ngIf="shippingForm.get('lastName')?.touched && shippingForm.get('lastName')?.invalid" class="error">
+            Last Name is required
+          </div>
+        </div>
+      </div>
+      <div class="shipping-form__sub_container">
+        <div class="shipping-container__form__container">
+          <div class="shipping-container__form__container__content">
+            <label for="shippingAddressLine1" class="label">AddressLine1
+              <label
+                [class.error]="shippingForm.get('addressLine1')?.invalid && (shippingForm.get('addressLine1')?.touched)">
+                *
+              </label>
+            </label>
+
+            <input type="text" class="shipping_form__txtInputsize" name="shippingAddressLine1"
+              formControlName="addressLine1" id="addressLine1" />
+            <div *ngIf="shippingForm.get('addressLine1')?.touched && shippingForm.get('addressLine1')?.invalid"
+              class="error">
+              Address Line 1 is required
+            </div>
+          </div>
+        </div>
+
+        <div class="shipping-container__form__container shipping-container__form__container__content">
+          <label for="shippingAddressLine2" class="label">Address Line 2</label>
+          <input type="text" class="shipping_form__txtInputsize" name="shippingAddressLine2"
+            formControlName="addressLine2" id="addressLine2" />
+
+        </div>
+      </div>
+      <div class="shipping-form__sub_container">
+        <div class="shipping-container__form__container">
+          <div class="shipping-container__form__container__content">
+            <label for="shippingCountry" class="label">Country
+              <label [class.error]="shippingForm.get('country')?.invalid && (shippingForm.get('city')?.touched)">
+                *
+              </label>
+            </label>
+
+            <select formControlName="country" id="country" name="shippingCountry"
+              class="shipping_form__txtInputsize shipping_form__selctbox">
+              <option value="" disabled selected>Select your country</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Houston">Houston</option>
+              <option value="New York City">New York </option>
+
+            </select>
+            <div *ngIf="shippingForm.get('country')?.touched && shippingForm.get('country')?.invalid" class="error">
+              Country is required
+            </div>
+          </div>
+        </div>
+
+
+        <div class="shipping-container__form__container">
+          <div class="shipping-container__form__container__content">
+            <label for="shippingZipCode" class="label">Zip Code
+              <label [class.error]="shippingForm.get('zipCode')?.invalid && (shippingForm.get('zipCode')?.touched)">
+                *
+              </label>
+            </label>
+
+
+            <input formControlName="zipCode" id="zipCode" type="number" class="shipping_form__txtInputsize"
+              name="shippingZipCode" />
+            <div *ngIf="shippingForm.get('zipCode')?.touched && shippingForm.get('zipCode')?.invalid" class="error">
+
+              <span *ngIf="billingForm.get('zipCode')?.errors?.['required']">Zip Code is required</span>
+              <span *ngIf="billingForm.get('zipCode')?.errors?.['pattern']">Enter valid Zip Code</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="shipping-form__sub_container">
+        <div class="shipping-container__form__container">
+          <div class="shipping-container__form__container__content">
+            <label for="shippingCity" class="label">City
+              <label [class.error]="shippingForm.get('city')?.invalid && (shippingForm.get('city')?.touched)">
+                *
+              </label>
+            </label>
+
+
+            <input formControlName="city" id="city" class="shipping_form__txtInputsize" name="shippingCity" />
+            <div *ngIf="shippingForm.get('city')?.touched && shippingForm.get('city')?.invalid" class="error">
+              City is required
+            </div>
+          </div>
+        </div>
+
+        <div class="shipping-container__form__container">
+          <div class="shipping-container__form__container__content">
+            <label for="shippingState" class="label">State
+              <label [class.error]="billingForm.get('state')?.invalid && (billingForm.get('state')?.touched)">
+                *
+              </label>
+            </label>
+
+            <select formControlName="state" id="state" class="shipping_form__txtInputsize shipping_form__selctbox"
+              name="shippingCity">
+              <option value="" disabled selected>Select your state</option>
+              <option value="California">California</option>
+              <option value="Texas">Texas</option>
+              <option value="New York">New York</option>
+
+            </select>
+            <div *ngIf="shippingForm.get('state')?.touched && shippingForm.get('state')?.invalid" class="error">
+              State is required
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="shipping-container__form__container">
+        <div class="shipping-container__form__container__content">
+          <label for="shippingMobilePhone" class="label">Mobile Number
+            <label [class.error]="shippingForm.get('phone')?.invalid && (shippingForm.get('phone')?.touched)">
+              *
+            </label>
+          </label>
+
+
+          <br><input type="number" class="shipping_form__txtInputsize" name="shippingMobilePhone"
+            formControlName="phone" id="phone" />
+          <div *ngIf="shippingForm.get('phone')?.touched && shippingForm.get('phone')?.invalid" class="error">
+
+            <span *ngIf="billingForm.get('phone')?.errors?.['required']">Mobile Number is required</span>
+            <span *ngIf="billingForm.get('phone')?.errors?.['pattern']">Enter valid Mobile Number</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="shipping-container__form__container__content">
+        <input type="checkbox" id="saveShipping" #shippingCheckbox [checked]="saveShippingAddressCheckBox"
+          (change)="saveShippingAddress(shippingCheckbox.checked)" />
+
+        <label for="saveShipping">Save Shipping Address</label>
+      </div>
+      <div>
+      </div>
+    </div>
+  </form>
+</div>

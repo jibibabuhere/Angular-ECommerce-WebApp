@@ -1,0 +1,55 @@
+<div *ngIf="isOrderSummaryVisible && cartItems.length > 0" class="order-summary__container">
+  <div class="order-summary__container__header">
+    <div class="order-summary__container__header__truck__icon">
+      <mat-icon class="order-summary__container__header__truck__icon__image">local_shipping</mat-icon>
+      <span class="order-summary__container__header__truck__icon__title">This order ships free!</span>
+    </div>
+  </div>
+
+  <div id="orderSummary">
+    <div *ngFor="let item of cartItems" class="order-summary__container__content">
+      <span class="order-summary__container__content__text">({{ item.quantity }} x) {{ item.name }}:</span>
+      <span class="order-summary__container__content__label">${{ item.total }}.00</span>
+    </div>
+
+    <hr>
+    <div class="order-summary__container__content order-summary__container__content__sub__fields">
+
+      <strong> <span
+          class="order-summary__container__content order-summary__container__content__sub__fields__text">Subtotal:</span></strong>
+      <span class="order-summary__container__content__label">${{ orderSummary.subtotalAmt }}</span>
+    </div>
+
+    <div class="order-summary__container__content order-summary__container__content__sub__fields">
+
+      <span
+        class="order-summary__container__content order-summary__container__content__sub__fields__text">Discount:</span>
+      <span class="order-summary__container__content__label">
+        {{ +orderSummary.promoCodeDiscount > 0 ? '-' : '' }}${{ orderSummary.promoCodeDiscount }}
+      </span>
+    </div>
+
+    <div class="order-summary__container__content order-summary__container__content__values">
+      <span class="order-summary__container__content order-summary__container__content__sub__fields__text">Delivery
+        Charge: </span>
+      <span class="order-summary__container__content__label">${{ orderSummary.deliveryCharge }}</span>
+    </div>
+
+    <div class="order-summary__container__content order-summary__container__content__values">
+      <span class="order-summary__container__content order-summary__container__content__sub__fields__text">Tax: </span>
+      <span class="order-summary__container__content__label">${{ orderSummary.tax }}</span>
+    </div>
+
+    <div class="order-summary__container__content order-summary__container__content__values">
+      <strong><span
+          class="order-summary__container__content order-summary__container__content__sub__fields__text">Total:</span>
+      </strong>
+      <span class="order-summary__container__content__label">${{ orderSummary.total }}</span>
+    </div>
+  </div>
+
+  <button class="order-summary__container__content__submitbutton" (click)="onButtonClick()"
+    [disabled]="!isButtonEnabled" [style.opacity]="isButtonEnabled ? '1' : '0.5'">
+    <i class="lock-icon">🔒</i> {{ buttonText }}
+  </button>
+</div>

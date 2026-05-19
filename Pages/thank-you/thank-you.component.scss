@@ -1,0 +1,13 @@
+.thank-youPage__Container {
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .thank-youPage__Container {
+
+        flex-direction: column;
+        padding: 1rem;
+        width: 100%;
+    }
+}

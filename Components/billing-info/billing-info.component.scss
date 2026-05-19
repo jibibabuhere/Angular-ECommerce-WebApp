@@ -1,0 +1,297 @@
+.billing-info-container {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 100%;
+
+  box-sizing: border-box;
+
+}
+
+.billing-info__container__header {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.billing-info-container h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+.billing-info-container button i {
+  margin-right: 5px;
+}
+
+.billing-info__container__header__title {
+  font-size: 20px;
+  font-weight: 500;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-right: auto;
+
+
+}
+
+.billing-info__container__header__edit__button {
+
+
+  margin-left: auto;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: 800px;
+
+  padding-right: 15px;
+
+  gap: 5px;
+
+  margin-top: 20px;
+
+
+}
+
+.billing-info__container__header__edit__button____routerLink {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.billing-info__container__header__edit__button____routerLink a {
+  text-decoration: none;
+  color: blue;
+  display: flex;
+  align-items: center;
+}
+
+.billing-info__container__header__edit__button____routerLink i {
+  margin-left: 5px;
+}
+
+.billing-info__container__header__edit__button__link {
+  text-decoration: none;
+  color: blue;
+}
+
+
+.billing_form__edit__text {
+  margin-left: 5px;
+  overflow-wrap: break-word;
+  max-width: 45px;
+
+}
+
+.billing-info__container__content {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px
+}
+
+.billing-info__container__content i {
+  margin-right: 10px;
+
+}
+
+.billing-info__container__content__icon__style {
+  margin-left: 12px;
+
+
+
+}
+
+.billing-info__container__content__text {
+
+  flex-grow: 1;
+  margin-left: 20px;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 200px;
+}
+
+.billing-info__container__content__label {
+  margin-left: 23px;
+
+}
+
+.billing-info__iconSize {
+  font-size: 12px;
+}
+
+
+.billing-info__container__header__edit__button__edit-icon:hover {
+  background-color: #e0e0e0;
+}
+
+.billing-info__container__header__edit__button__edit-icon {
+  font-size: 18px;
+  margin-top: 7px;
+
+  flex-shrink: 0;
+  position: relative;
+
+
+}
+
+.billing-info__container__content__person-icon {
+  color: #000;
+
+  cursor: pointer;
+}
+
+.billing-info__container__content__person-icon:hover {
+
+  background-color: #fff;
+}
+
+.billing-info__container__content__address-icon {
+  font-size: 24px;
+  color: #000;
+
+
+
+}
+
+.billing-info__icon_aign {
+  font-size: 24px;
+  color: #000;
+
+}
+
+.billing-info__container__content__Icon {
+  flex-shrink: 0;
+  position: relative;
+}
+
+
+
+
+@media (max-width: 767px) {
+
+  .billing-info-container {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+
+    max-width: 500px;
+
+  }
+
+  .billing-info-container h2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .billing-info__container__header__title {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    overflow-wrap: break-word;
+    margin-right: auto;
+
+  }
+
+  .billing-info__container__header__edit__button {
+
+    font-size: 9px;
+    margin-bottom: 8px;
+
+  }
+
+  .billing-info__container__content {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 15px;
+    gap: 10px
+  }
+
+  .billing-info__container__content__icon__style,
+  .billing-info__container__content__text,
+  .billing-info__container__content__label {
+    margin-left: 10px;
+  }
+
+  .billing-info__container__content i {
+    margin-right: 5px;
+  }
+
+  .billing-info__iconSize {
+    font-size: 14px;
+  }
+
+  .billing-info__container__header__edit__button__edit-icon {
+    font-size: 16px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .billing-info__container__content__address-icon,
+  .billing-info__icon_aign {
+    font-size: 18px;
+  }
+
+  .billing-info__container__content__person-icon {
+    font-size: 16px;
+  }
+
+  .billing-info__container__header__edit__button__link {
+
+    font-size: 14px;
+
+  }
+
+  .billing_form__edit__text {
+    overflow-wrap: break-word;
+    max-width: 45px;
+
+
+  }
+
+}
+
+
+// ipad mini
+
+@media (min-width: 726px) and (max-width: 768px) {
+  .billing-info-container {
+    width: 380px;
+
+  }
+
+}
+
+// ipad pro 
+
+@media (min-width: 900px) and (max-width: 1210px) {
+  .billing-info-container {
+    width: 400px;
+
+  }
+}
+
+// ipad air 
+@media (min-width: 801px) and (max-width: 990px) {
+  .billing-info-container {
+    width: 400px;
+  }
+}
+
+
+//   surface duo
+@media (min-width: 540px) and (max-width: 720px) {
+  .billing-info-container {
+    width: 440px;
+  }
+}

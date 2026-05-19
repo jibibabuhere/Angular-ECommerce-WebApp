@@ -1,0 +1,501 @@
+.billing_container {
+    margin-top: 30px;
+}
+
+.billing-container__form {
+    width: 100%;
+
+    height: auto;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    border: 1px solid #ddd;
+
+}
+
+.billing-container__form__container__content {
+    margin-top: 30px;
+}
+
+.billing-container__form__header,
+.billing-email_textInput,
+.billing-text,
+.billing-container__form__container__content__input__fields,
+.billing-container__form__container__content__input__fields__selectbox {
+
+    margin-top: 10px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.billing-container__form__header {
+    padding-left: 0px;
+    font-size: 26px;
+}
+
+.label {
+    margin-left: 2px;
+}
+
+.billing-container__form__container {
+    margin-top: 30px;
+
+}
+
+.billing-container__form__container__content__email__container {
+    margin-top: 10px;
+}
+
+.billing-container__form__container__content__email_field {
+    width: 480px;
+    height: 45px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+
+}
+
+.billing-text {
+    height: 45px;
+    width: 500px;
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.billing-form__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+.billing-container__form__container__content__input__fields {
+    height: 45px;
+    width: 220px;
+    border: 1px solid #ccc;
+}
+
+.billing-select {
+    width: 225px;
+    height: 45px;
+
+    padding-right: 15px;
+    border: 1px solid #cccccc;
+}
+
+.checkbox-address-button {
+    background-color: #8e2022;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 12px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.checkbox-address-button:hover {
+    background-color: #e60023;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .billing-container__form {
+        width: 90%;
+        padding: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%;
+        padding-bottom: 40px;
+        height: auto;
+    }
+
+    .billing-form__container {
+        flex-direction: column;
+        gap: 5px
+    }
+
+
+    .billing-container__form__container__content__email_field,
+
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 100%;
+
+    }
+
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 350px;
+        margin-bottom: 8px;
+        margin-top: 5px;
+        margin: 5px auto;
+        padding: 5px
+    }
+
+    .billing-container__form__container__content__email_field {
+        width: 350px;
+        margin-top: 5px;
+        margin-bottom: 8px;
+    }
+
+    .billing-container__form__container__content__input__fields {
+        height: 40px;
+        margin-top: 5px;
+        margin-bottom: 8px;
+        width: 350px;
+
+
+    }
+
+    .billing-container__form__container__content__input__fields__selectbox {
+        height: 50px;
+        margin-top: 8px !important;
+        margin-bottom: 8px !important;
+        box-sizing: border-box;
+        padding: 5px;
+        border: 1px solid #cccccc;
+
+    }
+
+
+    .billing-container__form__container__content__email_field {
+        height: 40px;
+    }
+
+
+    .billing-container__form__container {
+        margin-top: 20px;
+    }
+
+
+    .error {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .billing-container__form__container__content__email_field {
+
+
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .billing-container__form__container__content {
+
+        margin-top: 10px;
+    }
+
+}
+
+
+//  iPhone SE, iPhone XR, Samsung galaxy S8 , samsung galxy A51/71
+@media (max-width: 375px) {
+
+    .billing-container__form {
+
+        width: 350px;
+        padding: 10px;
+    }
+
+    .billing-container__form__container__content__email_field,
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 100%;
+    }
+}
+
+
+
+
+//    iPhone  XR, 14 Pro Max, pixel 7, s20 ultra
+@media (min-width: 390px) and (max-width: 430px) {
+    .billing-container__form {
+
+        width: 360px;
+        padding: 15px;
+    }
+
+    .billing-container__form__container__content__email_field,
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+
+        margin: 5px auto;
+        height: 45px;
+    }
+
+    .billing-container__form__container__content__email_field {
+        width: 350px;
+
+    }
+
+    .billing-container__form__container__content__input__fields {
+        width: 350px;
+
+    }
+
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 350px;
+
+    }
+
+}
+
+
+
+
+// ipad mini
+
+@media (min-width: 726px) and (max-width: 768px) {
+
+    .billing-container__form {
+        width: 600px;
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .billing-container__form__container__content__email_field,
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+
+        height: 50px;
+    }
+
+    .billing-container__form__container__content__email_field {
+        width: 600px;
+    }
+
+    .billing-container__form__container__content__input__fields {
+        width: 600px;
+
+    }
+
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 600px;
+
+    }
+}
+
+// ipad air, z fold
+@media (min-width: 769px) and (max-width: 915px) {
+    .billing-container__form {
+
+        width: 380px;
+        max-width: 380px;
+        padding: 15px;
+    }
+
+    .billing-form__container {
+        flex-direction: column;
+        gap: 5px
+    }
+
+    .billing-container__form__container__content__email_field,
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+
+        height: 45px;
+    }
+
+    .billing-container__form__container__content__email_field {
+        width: 370px;
+        height: 45px;
+
+    }
+
+    .billing-container__form__container__content__input__fields {
+
+        width: 370px;
+    }
+
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 370px;
+        border: 1px solid #ccc;
+    }
+
+}
+
+
+
+
+// i pad pro, surface pro 7
+
+@media (min-width: 900px) and (max-width: 1210px) {
+    .billing-container__form {
+        width: 450px;
+        max-width: 450px;
+        padding: 15px;
+    }
+
+    .bbilling-container__form__container__content__email_field,
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+        height: 55px;
+    }
+
+    .billing-container__form__container__content__email_field {
+        width: 440px;
+
+    }
+
+    .billing-container__form__container__content__input__fields {
+        width: 440px;
+    }
+
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 440px;
+
+    }
+
+    .billing-form__container {
+        flex-direction: column;
+        gap: 5px
+    }
+
+
+}
+
+//   Nest Hub, Nest Hub Max 
+@media (min-width: 1220px) and (max-width: 1500px) {
+    .billing-container__form {
+
+        width: 500px;
+        max-width: 850px;
+    }
+
+    .billing-container__form__container__content__email_field,
+
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+
+        border: 1px solid #cccccc;
+    }
+
+}
+
+
+//   surface duo
+@media (min-width: 540px) and (max-width: 720px) {
+
+    .billing-container__form {
+
+        width: 400px;
+        padding: 20px;
+    }
+
+    .billing-container__form__container__content__email_field,
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+
+        height: 50px;
+    }
+
+    .billing-container__form__container__content__email_field {
+        width: 400px
+    }
+
+    .billing-container__form__container__content__input__fields {
+        width: 400px
+    }
+
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 400px
+    }
+}
+
+
+
+// z fold
+@media (max-width: 360px) {
+
+    .billing-container__form {
+
+        width: 350px;
+        padding: 20px;
+        margin-left: 50px;
+    }
+
+    .billing-container__form__container__content__email_field,
+    .billing-container__form__container__content__input__fields,
+    .billing-container__form__container__content__input__fields__selectbox {
+
+        height: 40px;
+    }
+
+    .billing-container__form__container__content__email_field {
+        width: 340px;
+
+    }
+
+    .billing-container__form__container__content__input__fields {
+        width: 340px;
+
+    }
+
+    .billing-container__form__container__content__input__fields__selectbox {
+        width: 340px;
+    }
+
+
+
+}
+
+///amsung galaxty S8 plus
+@media (max-width: 360px) {
+    .billing-container__form__header {
+        font-size: 22px;
+
+    }
+}
+
+//////samsung gaaxy zfold
+@media (max-width: 412px) {
+    .billing-container__form__header {
+        font-size: 22px;
+
+
+    }
+}
+
+
+//iphone XR
+
+@media (max-width: 414px) {
+    .billing-container__form__header {
+
+        font-size: 22px;
+    }
+}
+
+//iphone 14 PRO MAX
+
+@media (max-width: 430px) {
+    .billing-container__form__header {
+
+        font-size: 22px;
+    }
+}
+
+////ipad air
+
+@media (max-width: 820px) {
+    .billing-container__form__header {
+
+        font-size: 22px;
+    }
+}

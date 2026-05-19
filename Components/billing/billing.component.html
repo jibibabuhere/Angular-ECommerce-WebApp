@@ -1,0 +1,190 @@
+<div class="billing_container">
+  <form [formGroup]="billingForm" (ngSubmit)="submitBilling()" class="billing-container__form">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <h2 class="billing-container__form__header">{{addressTitle}}</h2>
+
+      <button (click)="onOpenPopup()" class="checkbox-address-button">Pick Billing Address</button>
+    </div>
+    <div class="billing-container__form__container">
+      <div class="billing-container__form__container__content">
+        <label for="email" class="billing-container__form__container__content__email__container label">Email Address
+          <label [class.error]="billingForm.get('email')?.invalid && (billingForm.get('email')?.touched)">
+            *
+          </label>
+        </label>
+        <input type="email" formControlName="email" id="email"
+          class="billing-container__form__container__content__email_field" />
+        <div *ngIf="billingForm.get('email')?.touched && billingForm.get('email')?.invalid" class="error">
+
+          <span *ngIf="billingForm.get('email')?.errors?.['required']">Email Address is required</span>
+          <span *ngIf="billingForm.get('email')?.errors?.['pattern']">Enter valid Email</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="billing-form__container">
+      <div class="billing-container__form__container__content">
+        <label for="firstName" class="label">First Name
+          <label [class.error]="billingForm.get('firstName')?.invalid && (billingForm.get('firstName')?.touched)">
+            *
+          </label>
+        </label>
+
+        <input type="text" formControlName="firstName" id="firstName"
+          class="billing-container__form__container__content__input__fields" name="firstName" />
+        <div *ngIf="billingForm.get('firstName')?.touched && billingForm.get('firstName')?.invalid" class="error">
+          First Name is required
+        </div>
+      </div>
+      <div class="billing-container__form__container__content">
+        <label for="lastName" class="label">Last Name
+          <label [class.error]="billingForm.get('lastName')?.invalid && (billingForm.get('lastName')?.touched)">
+            *
+          </label>
+        </label>
+        <input type="text" class="billing-container__form__container__content__input__fields" formControlName="lastName"
+          name="lasttName" id="lastName" />
+        <div *ngIf="billingForm.get('lastName')?.touched && billingForm.get('lastName')?.invalid" class="error">
+          Last Name is required
+        </div>
+
+      </div>
+    </div>
+
+    <div class="billing-form__container">
+      <div class="">
+        <div class="billing-container__form__container__content">
+          <label for="addressLine1" class="label">AddressLine1
+            <label
+              [class.error]="billingForm.get('addressLine1')?.invalid && (billingForm.get('addressLine1')?.touched)">
+              *
+            </label>
+          </label>
+
+          <input type="text" class="billing-container__form__container__content__input__fields" name="addressLine1"
+            formControlName="addressLine1" id="addressLine1" />
+          <div *ngIf="billingForm.get('addressLine1')?.touched && billingForm.get('addressLine1')?.invalid"
+            class="error">
+            Address Line 1 is required
+          </div>
+        </div>
+      </div>
+      <div class="billing-container__form__container__content">
+        <label for="addressLine2" class="label">Address Line 2</label>
+        <input type="text" class="billing-container__form__container__content__input__fields" name="addressLine2"
+          formControlName="addressLine2" id="addressLine2" />
+
+      </div>
+    </div>
+    <div class="billing-form__container">
+      <div class="">
+        <div class="billing-container__form__container__content">
+          <label for="country" class="label">Country
+            <label [class.error]="billingForm.get('country')?.invalid && (billingForm.get('city')?.touched)">
+              *
+            </label>
+          </label>
+
+          <select formControlName="country" id="country"
+            class="billing-container__form__container__content__input__fields billing-container__form__container__content__input__fields__selectbox">
+            <option value="" disabled selected>Select your Country</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Houston">Houston</option>
+            <option value="New York City">New York </option>
+
+          </select>
+          <div *ngIf="billingForm.get('country')?.touched && billingForm.get('country')?.invalid" class="error">
+            Country is required
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="">
+        <div class="billing-container__form__container__content">
+          <label for="zipCode" class="label">Zip Code
+            <label [class.error]="billingForm.get('zipCode')?.invalid && (billingForm.get('zipCode')?.touched)">
+              *
+            </label>
+          </label>
+
+
+          <input type="number" class="billing-container__form__container__content__input__fields" name="zipcode"
+            formControlName="zipCode" id="zipCode" />
+          <div *ngIf="billingForm.get('zipCode')?.touched && billingForm.get('zipCode')?.invalid" class="error">
+
+            <span *ngIf="billingForm.get('zipCode')?.errors?.['required']">Zip Code is required</span>
+            <span *ngIf="billingForm.get('zipCode')?.errors?.['pattern']">Enter valid Zip Code</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="billing-form__container">
+      <div class="">
+        <div class="billing-container__form__container__content">
+          <label for="city" class="label">City
+            <label [class.error]="billingForm.get('city')?.invalid && (billingForm.get('city')?.touched)">
+              *
+            </label>
+          </label>
+          <input formControlName="city" id="city" class="billing-container__form__container__content__input__fields"
+            name="city" />
+          <div *ngIf="billingForm.get('city')?.touched && billingForm.get('city')?.invalid" class="error">
+            City is required
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="billing-container__form__container__content">
+          <label for="state" class="label">State
+            <label [class.error]="billingForm.get('state')?.invalid && (billingForm.get('state')?.touched)">
+              *
+            </label>
+          </label>
+
+          <select formControlName="state" id="state" name="state"
+            class="billing-container__form__container__content__input__fields billing-container__form__container__content__input__fields__selectbox">
+            <option value="" disabled selected>Select your state</option>
+            <option value="California">California</option>
+            <option value="Texas">Texas</option>
+            <option value="New York">New York</option>
+
+          </select>
+          <div *ngIf="billingForm.get('state')?.touched && billingForm.get('state')?.invalid" class="error">
+            State is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="billing-container__form__container__content">
+        <label for="phone" class="label">Mobile Number <label
+            [class.error]="billingForm.get('phone')?.invalid && (billingForm.get('phone')?.touched)">
+            *
+          </label></label>
+
+
+        <br> <input type="number" class="billing-container__form__container__content__input__fields" name="phone"
+          formControlName="phone" id="phone" />
+        <div *ngIf="billingForm.get('phone')?.touched && billingForm.get('phone')?.invalid" class="error">
+
+          <span *ngIf="billingForm.get('phone')?.errors?.['required']">Mobile Number is required</span>
+          <span *ngIf="billingForm.get('phone')?.errors?.['pattern']">Enter valid Mobile Number</span>
+        </div>
+      </div>
+      <div>
+
+      </div>
+    </div>
+
+    <div class="billing-container__form__container__content">
+      <input type="checkbox" id="saveBilling" #billingCheckbox [checked]="saveBillingAddressCheckBox"
+        (change)="saveBillingAddress(billingCheckbox.checked)" />
+      <label for="saveBilling">Save Billing Address</label>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,87 @@
+<div class="address-container">
+  <div class="address-header">
+    <a href=""></a>
+    <button mat-icon-button (click)="goToCartPage()" class="address-header__back-button">
+
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h2 class="address-header__title">{{addressTItle}}</h2>
+  </div>
+
+  <div class="address-container__content">
+    <div class="address-container__content__address-continer">
+
+      <app-billing [billingForm]="billingForm" (billingDataEmitter)="onBillingDataReceived($event)"
+        (emailEmitter)="onEmailReceived($event)" (saveBillingAddressChange)="onSaveBillingAddressChange($event)"
+        [saveBillingAddressCheckBox]="formDataAddressBook.saveBillingAddress" (openPopup)="openPopup('billing')">
+      </app-billing>
+
+      <app-shipping [billingForm]="billingForm" [shippingForm]="shippingForm" [formData]="formData"
+        [isShippingSameAsBilling]="formData.isShippingSameAsBilling"
+        (sameAsBillingChange)="copyBillingToShipping($event)"
+        (saveShippingAddressChange)="onSaveShippingAddressChange($event)"
+        [saveShippingAddressCheckBox]="formDataAddressBook.saveShippingAddress"
+        (openPopup)="openPopup('shipping')"></app-shipping>
+
+
+      <div *ngIf="showPopup" class="popup">
+        <div class="popup-content">
+          <h2>{{popupTitle}}</h2>
+          <div class="address-list">
+            <form>
+              <div *ngFor="let address of addressBook; let i = index" class="address-item">
+                <div class="radio-label-container">
+                  <input type="radio" id="address-{{ i }}" name="selectedAddress"
+                    [checked]="selectedAddress && compareAddresses(address, selectedAddress)"
+                    (change)="selectAddress(address)" />
+
+                  <label for="address-{{ i }}" style="margin-left: 10px;">
+                    <strong>{{ address.firstName }} {{ address.lastName }}</strong>
+                    <div style="margin-top: 5px;">
+                      {{ address.addressLine1 }}
+                      {{ address.addressLine2 || '' }}
+                      {{ address.city }}
+                      {{ address.state }}
+                      {{ address.country }}
+                      {{ address.zipCode }}
+                    </div>
+
+                    <div style="margin-top: 3px;">
+                      {{ address.email || 'N/A' }}
+                    </div>
+
+                    <div style="margin-top: 3px;">
+                      {{ address.phone }}
+                    </div>
+
+                  </label>
+
+                </div>
+              </div>
+            </form>
+            <div *ngIf="addressBook.length === 0" class="no-address">
+              <p class="no-address-found">No address found</p>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button *ngIf="hasAvailableAddresses()" class="use-button" (click)="useSelectedAddress()">Use this
+              Address</button>
+
+            <button class="close-button" (click)="closePopup()">Close</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="address-container__content__ordersummsry-continer">
+
+      <app-common-order-summary [cartItems]="cartItems" [orderSummary]="orderSummary"
+        [isOrderSummaryVisible]="isOrderSummaryVisible" [buttonText]="'Continue to Review'"
+        [isButtonEnabled]="isButtonEnabledMethod()" (buttonClick)="onOrderSummaryButtonClick()">
+      </app-common-order-summary>
+
+    </div>
+  </div>
+</div>

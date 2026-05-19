@@ -1,0 +1,258 @@
+.contact-info__container {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info__container__header {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-info__container h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info__container button i {
+  margin-right: 5px;
+}
+
+.contact-info__container__header__title {
+  font-size: 20px;
+  font-weight: 500;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-right: auto;
+
+}
+
+.contact-info__container__header__edit__button {
+  margin-left: auto;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: 800px;
+  margin-top: 20px;
+  padding-right: 25px;
+  gap: 5px
+}
+
+.contact-info__container__header__edit__button__link {
+  text-decoration: none;
+  color: blue;
+}
+
+.contact-info__container__header__edit__button__routerLink {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info__container__header__edit__button__routerLink a {
+  text-decoration: none;
+  color: blue;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info__container__header__edit__button__routerLink i {
+  margin-left: 5px;
+}
+
+.edit-buttonSpaceBill {
+  margin-left: 205px;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: 800px;
+  margin-bottom: 22px;
+}
+
+.contact-info__container__header__edit__button__edit-text {
+  margin-left: 5px;
+  overflow-wrap: break-word;
+  max-width: 45px;
+
+
+}
+
+.contact-info__container__content {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  margin-left: 12px;
+
+}
+
+.contact-info__container__content i {
+  margin-right: 10px;
+}
+
+
+
+.contact-info__container__content__label-text {
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex-grow: 1;
+  max-width: 170px;
+}
+
+
+.contact-info__container__header__edit__button__edit-icon:hover {
+  background-color: #e0e0e0;
+}
+
+.contact-info__container__header__edit__button__edit-icon {
+  font-size: 18px;
+  margin-top: 7px;
+  flex-shrink: 0;
+  position: relative;
+
+}
+
+.contact-info__container__content__emailIcon {
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+
+@media (max-width: 767px) {
+
+  .contact-info__container {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    padding-bottom: 30px;
+    max-width: 500px;
+    min-width: 300px;
+
+
+  }
+
+  .contact-info__container h2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-info__container__header__title {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin-right: auto;
+  }
+
+  .contact-info__container__header__edit__button {
+    font-size: 14px;
+    padding-right: 15px;
+    gap: 5px;
+    margin-top: 10px;
+
+  }
+
+  .contact-info__container__header__edit__button__edit-text {
+    margin-left: 5px;
+    overflow-wrap: break-word;
+    max-width: 45px;
+
+  }
+
+  .edit-buttonSpaceBill {
+    margin-left: 0;
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+
+  .contact-info__container__content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    gap: 10px
+  }
+
+  .contact-info__container__content__label-text {
+    margin-left: 20px;
+    margin-top: -30px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .cart-info__content__container1 {
+    margin-left: 10px;
+  }
+
+  .contact-info__container__header__edit__button__routerLink,
+  .contact-info__container__header__edit__button__routerLink a {
+    font-size: 12px;
+  }
+
+  .contact-info__container__header__edit__button__edit-icon {
+    font-size: 16px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .contact-info__container__header__edit__button__link {
+    font-size: 14px;
+  }
+
+  .contact-info__container__content__emailIcon {
+    flex-shrink: 0;
+    position: relative;
+  }
+}
+
+//   surface duo
+@media (min-width: 540px) and (max-width: 720px) {
+  .contact-info__container {
+    width: 440px;
+  }
+}
+
+
+// ipad mini 
+
+@media (min-width: 726px) and (max-width: 768px) {
+  .contact-info__container {
+    width: 380px;
+  }
+
+}
+
+
+// ipad air 
+@media (min-width: 801px) and (max-width: 990px) {
+  .contact-info__container {
+    width: 400px;
+  }
+}
+
+// ipad pro
+
+@media (min-width: 900px) and (max-width: 1210px) {
+  .contact-info__container {
+    width: 400px;
+  }
+
+}

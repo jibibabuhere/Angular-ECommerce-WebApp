@@ -1,0 +1,55 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.register-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+.login-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.login-button:hover {
+  background-color: #1e7e34;
+}
+
+.error-image {
+  width: 500px;
+  height: 450px;
+  display: block;
+  margin: 0 auto 10px;
+}
